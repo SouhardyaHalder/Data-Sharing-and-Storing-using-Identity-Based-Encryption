@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uploaded Files</title>
+
+</head>
+<body>
+<h1>All the Uploaded Files</h1>
+<div class="row border bounded">
+    <block th:each="doc : ${listDocs}">
+        <div>
+            <a th:href="@{'/download?id='+ ${doc.id}}">[[${doc.name}]]</a>
+
+        </div>
+    </block>
+</div>
+</body>
+</html>
+
